@@ -67,7 +67,7 @@ abandonCrop = abandonCrop * exclude_protect
 
 # ----------- 3. write as nc file ----------------------
 # create dimension; create variable; fill dimension; fill variables
-ncfile = nc.Dataset('../outputData/bioenergy.nc','w',format='NETCDF4')
+ncfile = nc.Dataset('../outputData/NetCDF/BioRes_breakdown.nc','w',format='NETCDF4')
 ncfile.createDimension('lat', 4000) # latitude axis
 ncfile.createDimension('lon', 7000)  # longitude axis
 
@@ -83,13 +83,3 @@ land2.standard_name = 'marginal_land_by_type'
 land2[:,:] = marginLand
 
 ncfile.close()
-
-
-
-
-
-
-
-
-
-
